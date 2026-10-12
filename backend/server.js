@@ -17,6 +17,9 @@ app.get("/", (req, res)=> {
     res.send("Hi i am root");
 })
 
+app.get("/home", (req,res)=> {
+    res.json({message:"welcome to home page"});
+})
 // Set up the "/api/inngest" (recommended) routes with the serve handler
 app.use("/api/inngest", serve({ client: inngest, functions }));
 
